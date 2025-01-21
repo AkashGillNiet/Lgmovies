@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG MOVIE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>LG MOVIE</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for movies...">
+            <button onclick="searchMovies()">Search</button>
+        </div>
+    </header>
+    <main>
+        <div class="movie-thumbnails">
+            <div class="movie" onclick="openMoviePage('movie1')">
+                <img src="thumbnail1.jpg" alt="Movie 1">
+                <h2>Movie Title 1</h2>
+            </div>
+            <div class="movie" onclick="openMoviePage('movie2')">
+                <img src="thumbnail2.jpg" alt="Movie 2">
+                <h2>Movie Title 2</h2>
+            </div>
+            <!-- Add more movie thumbnails as needed -->
+        </div>
+    </main>
+
+    <div id="movie-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <video id="video-player" controls>
+                <source id="video-source" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button onclick="downloadMovie()">Download Now</button>
+            <button onclick="watchOnline()">Watch Online</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
