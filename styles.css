@@ -15,44 +15,64 @@ header {
 .search-container {
     margin-top: 10px;
     display: flex;
-    justify-content: center; /* Center the search container */
+    justify-content: center;
 }
 
 .search-container input {
     padding: 10px;
     width: 300px;
     border: none;
-    border-radius: 5px 0 0 5px; /* Rounded corners for the left side */
+    border-radius: 5px 0 0 5px;
 }
 
 .search-container button {
     padding: 10px;
     border: none;
-    background-color: #555; /* Button background color */
-    color: white; /* Button text color */
-    border-radius: 0 5px 5px 0; /* Rounded corners for the right side */
-    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #555;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
 }
 
 .search-container button:hover {
-    background-color: #777; /* Button hover color */
+    background-color: #777;
 }
 
 .movie-thumbnails {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
+    flex-direction: column; /* Movies arranged vertically */
+    margin: 20px auto;
+    max-width: 800px; /* Center align and limit width */
 }
 
 .movie {
-    margin: 10px;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
     cursor: pointer;
 }
 
+.movie:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
 .movie img {
-    width: 150px;
-    height: 200px;
+    width: 120px; /* Thumbnail size */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px; /* Space between thumbnail and title */
+}
+
+.movie h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
 }
 
 .popup {
@@ -70,11 +90,35 @@ header {
 .popup-content {
     background: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .close {
     cursor: pointer;
     float: right;
+    font-size: 24px;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #000;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
