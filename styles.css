@@ -12,6 +12,12 @@ header {
     text-align: center;
 }
 
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
 .search-container {
     margin-top: 10px;
     display: flex;
