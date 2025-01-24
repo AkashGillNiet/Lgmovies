@@ -20,32 +20,30 @@ header input {
 
 #movies {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
 }
 
 .movie {
-  display: flex;
-  align-items: center;
+  margin: 10px;
   background: #292929;
   border-radius: 5px;
+  text-align: center;
   padding: 10px;
-  gap: 15px;
+  width: 200px;
 }
 
 .movie img {
-  width: 150px;
-  height: auto;
+  width: 100%;
   border-radius: 5px;
 }
 
 .movie-info {
-  flex-grow: 1;
+  margin-top: 10px;
 }
 
 .movie-info h2 {
-  margin: 0;
   font-size: 18px;
 }
 
@@ -62,4 +60,14 @@ header input {
 
 .movie-info .btn:hover {
   background-color: #e64a19;
+}
+
+#watch {
+  text-align: center;
+  margin: 20px;
+}
+
+#movie-player {
+  width: 100%;
+  max-width: 800px;
 }
