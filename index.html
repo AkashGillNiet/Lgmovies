@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LG MOVIE</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Hub</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>LG MOVIE</h1>
-        <div class="search-container">
-            <input type="text" id="search" placeholder="Search for movies...">
-            <button onclick="searchMovies()">Search</button>
-        </div>
-    </header>
-    <main>
-        <div class="movie-thumbnails">
-            <div class="movie" onclick="openMoviePage('movie1')">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlcmhtH0Run4Q0QMkd-u5u8h9d7MCfiyxweA46TneWwyyJAewZwykFEpg&s=10" alt="Movie 1">
-                <h2>Movie Title 1</h2>
-            </div>
-            <div class="movie" onclick="openMoviePage('movie2')">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlcmhtH0Run4Q0QMkd-u5u8h9d7MCfiyxweA46TneWwyyJAewZwykFEpg&s=10" alt="Movie 2">
-                <h2>Movie Title 2</h2>
-            </div>
-        </div>
-    </main>
+  <header>
+    <h1>Movie Hub</h1>
+    <input type="text" id="search" placeholder="Search for movies..." onkeyup="searchMovies()">
+  </header>
 
-    <div id="movie-popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2 id="popup-title"></h2>
-            <video id="video-player" controls>
-                <source id="video-source" src="" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <button onclick="downloadMovie()">Download Now</button>
-            <button onclick="watchOnline()">Watch Online</button>
-        </div>
+  <section id="movies">
+    <div class="movie">
+      <img src="poster1.jpg" alt="Movie 1">
+      <div class="movie-info">
+        <h2>Movie 1</h2>
+        <a href="movies/movie1.html" target="_blank" class="btn">Watch Now</a>
+        <a href="download/movie1.mp4" download class="btn">Download</a>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="movie">
+      <img src="poster2.jpg" alt="Movie 2">
+      <div class="movie-info">
+        <h2>Movie 2</h2>
+        <a href="movies/movie2.html" target="_blank" class="btn">Watch Now</a>
+        <a href="download/movie2.mp4" download class="btn">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
