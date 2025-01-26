@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lg Movies</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG MOVIES</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Movie Hub</h1>
-    <input type="text" id="search" placeholder="Search for movies..." onkeyup="searchMovies()">
-  </header>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>LG MOVIES</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search movies...">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
 
-  <section id="movies">
-    <div class="movie">
-      <img src="poster1.jpg" alt="Movie 1">
-      <div class="movie-info">
-        <h2>Movie 1</h2>
-        <a href="player.html?title=Movie%201&file=movies/movie1.mp4" class="btn">Watch Now</a>
-        <a href="download/movie1.mp4" download class="btn">Download</a>
-      </div>
-    </div>
+    <!-- Movies Section -->
+    <main>
+        <div class="movie-box">
+            <!-- Movie 1 -->
+            <div class="movie">
+                <div class="thumbnail">
+                    <img src="https://via.placeholder.com/150" alt="Movie Thumbnail">
+                </div>
+                <div class="movie-details">
+                    <h2>Movie Title 1</h2>
+                    <div class="buttons">
+                        <button class="download-btn" onclick="downloadMovie('https://example.com/movie1.mp4')">⬇</button>
+                        <button class="watch-btn" onclick="watchMovie('https://example.com/movie1.mp4')">▶</button>
+                    </div>
+                </div>
+            </div>
 
-    <div class="movie">
-      <img src="poster2.jpg" alt="Movie 2">
-      <div class="movie-info">
-        <h2>Movie 2</h2>
-        <a href="player.html?title=Movie%202&file=movies/movie2.mp4" class="btn">Watch Now</a>
-        <a href="download/movie2.mp4" download class="btn">Download</a>
-      </div>
-    </div>
-  </section>
+            <!-- Movie 2 -->
+            <div class="movie">
+                <div class="thumbnail">
+                    <img src="https://via.placeholder.com/150" alt="Movie Thumbnail">
+                </div>
+                <div class="movie-details">
+                    <h2>Movie Title 2</h2>
+                    <div class="buttons">
+                        <button class="download-btn" onclick="downloadMovie('https://example.com/movie2.mp4')">⬇</button>
+                        <button class="watch-btn" onclick="watchMovie('https://example.com/movie2.mp4')">▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-  <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
