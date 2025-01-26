@@ -78,9 +78,9 @@ header .search-bar button:hover {
 }
 
 .thumbnail img {
-    width: 100px; /* Fixed width for thumbnails */
+    width: 200px; /* Fixed width for thumbnails */
     height: 100px; /* Fixed height for thumbnails */
-    border-radius: 10px;
+    border-radius: 8px;
     object-fit: cover;
 }
 
