@@ -1,60 +1,150 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212; /* Dark background for better visibility */
+    color: #fff;
 }
 
+/* Header Styles */
 header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
+    background: #1e1e2f;
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* For stacking on mobile */
+    align-items: center;
 }
 
-#search {
-  padding: 10px;
-  margin-top: 10px;
-  width: 80%;
-  max-width: 400px;
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #00d4ff; /* Eye-catching cyan color */
+    text-align: center;
 }
 
-#movies {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+header .search-bar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+header .search-bar input {
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    outline: none;
+    width: 70%;
+}
+
+header .search-bar button {
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background: #00d4ff;
+    color: black;
+    cursor: pointer;
+}
+
+header .search-bar button:hover {
+    background: #00b8d9;
+}
+
+/* Movies Section */
+.movie-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
 }
 
 .movie {
-  width: 200px;
-  text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+    display: flex;
+    background: #1e1e2f;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    width: 90%; /* Adjusted for mobile screens */
+    max-width: 400px; /* Limit width for larger screens */
 }
 
-.movie img {
-  width: 100%;
-  height: auto;
+.thumbnail {
+    flex-shrink: 0;
 }
 
-.movie-info {
-  padding: 10px;
+.thumbnail img {
+    width: 100px; /* Fixed width for thumbnails */
+    height: 100px; /* Fixed height for thumbnails */
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #007BFF;
-  color: white;
-  padding: 10px;
-  margin-top: 10px;
-  text-decoration: none;
-  border-radius: 5px;
+.movie-details {
+    margin-left: 15px; /* Add spacing between thumbnail and details */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.movie-details h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.movie-details .buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.download-btn {
+    background: #28a745; /* Green for download */
+}
+
+.watch-btn {
+    background: #dc3545; /* Red for watch */
+}
+
+.buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 20px;
+    }
+
+    header .search-bar input {
+        width: 60%; /* Adjust search bar width */
+    }
+
+    .movie-box {
+        padding: 10px;
+    }
+
+    .movie {
+        flex-direction: row;
+        align-items: center;
+    }
 }
